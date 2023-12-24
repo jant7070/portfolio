@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap');
+
+
+
+.link-tag {
+    text-decoration: none;
+    color: white;
+    font-family: 'Nanum Gothic Coding', monospace;
+}
+
+/*.nav-bar {
+    background: transparent;
+    padding: 1%;
+}*/
+
+button {
+    color: black !important;
+    background-color: white !important;
+}
+
