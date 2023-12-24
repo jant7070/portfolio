@@ -13,7 +13,7 @@ export const Header = () => {
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                         <span>A</span>
                     </button>
-                    <div className="collapse navbar-collapse d-flex justify-content-end" id="navbarTogglerDemo01">
+                    <div className="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo01">
                         <ul className="navbar-nav">
                             <li className="nav-item mx-3">
                                 <Link className="link-tag" to="/about">About</Link>
