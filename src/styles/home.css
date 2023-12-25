@@ -1,4 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap');
+
+
 div {
     background-color: #18242c;
     color: white;
+}
+
+.presentation {
+    font-size: 5vw;
+    font-family: 'Nanum Gothic Coding', monospace;
+    position: relative;
+    bottom: 120px;
+}
+
+.description {
+    position: relative;
+    bottom: 120px;
+    font-family: 'Nanum Gothic Coding', monospace;
+    font-size: 2vw;
+}
+
+.button {
+    background-color: black;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    border-radius: 30px;
+    font-family: 'Nanum Gothic Coding', monospace;
+    transition: all .4s ease-in-out ;
+    display: inline-block;
+    font-size: 60%;
+}
+
+.button:hover {
+    transform: scale(1.2);
+    background: rgb(9,9,121);
+    background: linear-gradient(52deg, rgba(9,9,121,1) 24%, rgba(0,212,255,1) 100%);
 }
