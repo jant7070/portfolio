@@ -11,7 +11,7 @@ export const Header = () => {
         <div>
             <nav className="navbar navbar-expand-lg nav-bar sticky-top">
                 <div className="container-fluid">
-                    <Link className="link-tag" to="/">{`< Jose Morillo />`}</Link>
+                    <Link className="link-tag d-flex" to="/">{"<"}<p className="title mx-2"> Jose Morillo</p>{"/>"}</Link>
                     <button className="navbar-toggler bg-transparent border border-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                         <span><FontAwesomeIcon icon={faBars} /></span>
                     </button>

@@ -5,7 +5,7 @@ div {
     background-color: #18242c;
     color: white;
 }
-
+/*#18242c*/
 .presentation {
     font-size: 5vw;
     font-family: 'Nanum Gothic Coding', monospace;
@@ -34,6 +34,19 @@ div {
 
 .button:hover {
     transform: scale(1.2);
-    background: rgb(9,9,121);
-    background: linear-gradient(52deg, rgba(9,9,121,1) 24%, rgba(0,212,255,1) 100%);
+    animation: 5s ease infinite gradient;
+    background: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 900%;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 50% 100%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
