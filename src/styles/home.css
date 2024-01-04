@@ -2,7 +2,6 @@
 
 
 div {
-    background-color: #18242c;
     color: white;
 }
 /*#18242c*/
@@ -10,18 +9,19 @@ div {
     font-size: 5vw;
     font-family: 'Nanum Gothic Coding', monospace;
     position: relative;
-    bottom: 120px;
+    font-weight: bold;
+    bottom: 100px;
 }
 
 .description {
     position: relative;
-    bottom: 120px;
+    bottom: 100px;
     font-family: 'Nanum Gothic Coding', monospace;
+    font-weight: bold;
     font-size: 2vw;
 }
 
 .button {
-    background-color: black;
     padding: 10px;
     text-decoration: none;
     color: white;

@@ -1,20 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap');
 
-.link-tag {
+.nav-link {
     text-decoration: none;
     color: white;
     font-family: 'Nanum Gothic Coding', monospace;
+    font-weight: bold;
+    position: relative;
+    padding: 10px;
+    border-radius: 50px;
+    transition: all 0.3s ease-in;
 }
 
-.nav-bar {
-    background: transparent;
-    padding: 2%;
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    color: black;
 }
+
 
 button {
     color: white !important;
 }
 
-.title {
-    color: #41bca6;
+.navbar-nav {
+    border: solid white 3px;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+@media screen and (max-width: 992px) {
+    .navbar-nav {
+        border: none;
+    }
 }

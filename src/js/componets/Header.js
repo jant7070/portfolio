@@ -9,22 +9,24 @@ export const Header = () => {
 
     return (
         <div>
-            <nav className="navbar navbar-expand-lg nav-bar sticky-top">
+            <nav className="navbar navbar-expand-lg bg-transparent sticky-lg-top">
                 <div className="container-fluid">
-                    <Link className="link-tag d-flex" to="/">{"<"}<p className="title mx-2"> Jose Morillo</p>{"/>"}</Link>
-                    <button className="navbar-toggler bg-transparent border border-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                        <span><FontAwesomeIcon icon={faBars} /></span>
+                    <button className="navbar-toggler border-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <FontAwesomeIcon icon={faBars} />
                     </button>
-                    <div className="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo01">
-                        <ul className="navbar-nav">
-                            <li className="nav-item mx-3">
-                                <Link className="link-tag" to="/about">About</Link>
+                    <div className="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                        <ul className="navbar-nav px-3">
+                            <li className="nav-item">
+                                <Link className="nav-link mx-2" to="/">Home</Link>
                             </li>
-                            <li className="nav-item mx-3">
-                                <Link className="link-tag" to="/proyects">Proyects</Link>
+                            <li className="nav-item">
+                                <Link className="nav-link mx-2" to="/proyects">Proyects</Link>
                             </li>
-                            <li className="nav-item mx-3">
-                                <Link className="link-tag" to="/contact">Contact</Link>
+                            <li className="nav-item">
+                                <Link className="nav-link mx-2" to="/about">About</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link mx-2" to="/contact">Contact</Link>
                             </li>
                         </ul>
                     </div>
