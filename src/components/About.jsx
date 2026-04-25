@@ -1,6 +1,7 @@
 import { Reveal } from "./Reveal.jsx";
 import { SectionHeader } from "./SectionHeader.jsx";
 import { useI18n } from "./LanguageProvider.jsx";
+import { FloatingGeo } from "./FloatingGeo.jsx";
 
 function LanguageBadge({ flag, label, level }) {
   return (
@@ -17,7 +18,7 @@ function LanguageBadge({ flag, label, level }) {
       </span>
     </div>
   );
-}
+} 
 
 function IdentityCard() {
   const { t } = useI18n();
@@ -38,7 +39,10 @@ function IdentityCard() {
   };
 
   return (
-    <div className="rounded-[12px] p-6 font-mono text-[12.5px]" style={{ background: "var(--panel)", border: "1px solid var(--border)" }}>
+    <div
+      className="w-full max-w-[440px] rounded-[12px] p-6 font-mono text-[12.5px]"
+      style={{ background: "var(--panel)", border: "1px solid var(--border)" }}
+    >
       <div className="flex items-center justify-between pb-3" style={{ borderBottom: "1px solid var(--border)" }}>
         <div style={{ color: "var(--textFaint)" }}>{identity.file}</div>
         <div style={{ color: "var(--textFaint)" }}>●●●</div>
@@ -106,10 +110,13 @@ export function About() {
             </Reveal>
           </div>
 
-          <div className="md:col-span-5">
-            <Reveal delay={120}>
-              <IdentityCard />
-            </Reveal>
+          <div className="flex md:col-span-5 justify-center md:justify-end">
+            <div className="flex w-full max-w-[440px] flex-col items-center gap-6">
+              <FloatingGeo />
+              <Reveal delay={120}>
+                <IdentityCard />
+              </Reveal>
+            </div>
           </div>
         </div>
       </div>

@@ -1,11 +1,11 @@
 import { useTypewriter } from "../hooks/useTypewriter.js";
 import { Reveal } from "./Reveal.jsx";
-import { DotGrid } from "./DotGrid.jsx";
 import { useI18n } from "./LanguageProvider.jsx";
+import { ParticleField } from "./ParticleField.jsx";
 
 function HeroGlows() {
   return (
-    <>
+    <> 
       <div
         className="absolute left-1/2 top-[30%] h-[720px] w-[720px] -translate-x-1/2 -translate-y-1/2 pointer-events-none"
         aria-hidden="true"
@@ -69,7 +69,7 @@ export function Hero() {
       className="relative flex min-h-screen items-center pb-24 pt-24"
       style={{ paddingTop: "96px", paddingBottom: "96px" }}
     >
-      <DotGrid />
+      <ParticleField />
       <HeroGlows />
 
       <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-px" aria-hidden="true">

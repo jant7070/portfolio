@@ -52,7 +52,7 @@ export function ProjectCard({ project }) {
   return (
     <Base
       {...baseProps}
-      className="group relative block w-full overflow-hidden rounded-[12px] p-[26px] pb-[24px] text-left focus-visible:ring-2 focus-visible:ring-[#3B82F6]/50"
+      className="group relative flex h-full w-full flex-col overflow-hidden rounded-[12px] p-[26px] pb-[24px] text-left focus-visible:ring-2 focus-visible:ring-[#3B82F6]/50"
       style={{
         background: "var(--panel)",
         border: "1px solid var(--border)",
@@ -99,7 +99,7 @@ export function ProjectCard({ project }) {
         {title}
       </div>
 
-      <p className="mt-3 text-[14px] leading-[1.6]" style={{ color: "var(--textDim)" }}>
+      <p className="mt-3 min-h-0 flex-1 text-[14px] leading-[1.6]" style={{ color: "var(--textDim)" }}>
         {description}
       </p>
 
@@ -110,7 +110,7 @@ export function ProjectCard({ project }) {
       </div>
 
       {visitLabel ? (
-        <div className="mt-6 flex items-center gap-2 font-mono text-[12px]" style={{ color: "var(--textDim)" }}>
+        <div className="visitRow mt-6 flex items-center gap-2 font-mono text-[12px]" style={{ color: "var(--textDim)" }}>
           <span className="transition-colors">{visitLabel}</span>
           <span
             className="transition-transform"
@@ -124,8 +124,8 @@ export function ProjectCard({ project }) {
 
       <style>{`
         .group:hover > div[aria-hidden="true"] { opacity: 1; transform: scaleY(1); }
-        .group:hover div.font-mono.text-[12px] { color: var(--accentHi); }
-        .group:hover div.font-mono.text-[12px] span[aria-hidden="true"] { transform: translate(2px,-2px); }
+        .group:hover .visitRow { color: var(--accentHi); }
+        .group:hover .visitRow span[aria-hidden="true"] { transform: translate(2px,-2px); }
       `}</style>
     </Base>
   );

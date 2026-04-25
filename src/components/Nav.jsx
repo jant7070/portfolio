@@ -54,6 +54,7 @@ function AvailablePill() {
 function LanguageToggle() {
   const { lang, setLang, t } = useI18n();
   const next = lang === LANGS.en ? LANGS.es : LANGS.en;
+  const flag = lang === LANGS.en ? "🇺🇸" : "🇻🇪";
 
   return (
     <button
@@ -63,6 +64,9 @@ function LanguageToggle() {
       onClick={() => setLang(next)}
       aria-label={next === LANGS.es ? t("nav.langToggleToEs") : t("nav.langToggleToEn")}
     >
+      <span aria-hidden="true" className="text-[14px] leading-none">
+        {flag}
+      </span>
       <span className="font-mono text-[12.5px] uppercase tracking-[0.14em]" style={{ color: "var(--textDim)" }}>
         {lang === LANGS.en ? "EN" : "ES"}
       </span>
