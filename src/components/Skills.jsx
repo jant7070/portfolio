@@ -1,12 +1,14 @@
 import { Reveal } from "./Reveal.jsx";
 import { SectionHeader } from "./SectionHeader.jsx";
 import { SkillTag } from "./SkillTag.jsx";
+import { useI18n } from "./LanguageProvider.jsx";
 
-function pluralize(count, word) {
-  return `${count} ${word}${count === 1 ? "" : "s"}`;
+function pluralize(count, singular, plural) {
+  return `${count} ${count === 1 ? singular : plural}`;
 }
 
 function GroupCard({ index, title, items }) {
+  const { t } = useI18n();
   return (
     <div className="p-[28px] pb-[30px]" style={{ background: "var(--bgAlt)" }}>
       <div className="flex items-center justify-between">
@@ -14,7 +16,7 @@ function GroupCard({ index, title, items }) {
           {String(index).padStart(2, "0")} · {title}
         </div>
         <div className="font-mono text-[11px] uppercase tracking-[0.14em]" style={{ color: "var(--textFaint)" }}>
-          {pluralize(items.length, "tool")}
+          {pluralize(items.length, t("skills.tool"), t("skills.tools"))}
         </div>
       </div>
 
@@ -28,14 +30,8 @@ function GroupCard({ index, title, items }) {
 }
 
 export function Skills() {
-  const groups = [
-    { title: "AI & Automation", items: ["n8n", "MCP Server Development", "Claude AI / Anthropic API", "LLM Integration", "WATI WhatsApp API"] },
-    { title: "Backend", items: ["Python", "FastAPI", "SQLAlchemy", "JWT / RBAC", "REST API Design"] },
-    { title: "Frontend", items: ["React.js", "JavaScript ES6+", "Framer"] },
-    { title: "Database", items: ["PostgreSQL"] },
-    { title: "Integrations", items: ["Loandisk API", "BNC Payment API", "WATI API"] },
-    { title: "Infrastructure", items: ["VPS Deployment", "Server Configuration", "Production Management"] },
-  ];
+  const { t } = useI18n();
+  const groups = t("skills.groups");
 
   return (
     <section id="skills" style={{ background: "var(--bgAlt)" }} className="py-28 md:py-36">
@@ -44,9 +40,9 @@ export function Skills() {
       <div className="mx-auto max-w-6xl px-6 md:px-10">
         <Reveal delay={0}>
           <SectionHeader
-            kicker="02 / Capabilities"
-            title="The full stack — from server to LLM."
-            subtitle="Practical tools shipped to production. No theoretical lists; only what's running today."
+            kicker={t("skills.kicker")}
+            title={t("skills.title")}
+            subtitle={t("skills.subtitle")}
           />
         </Reveal>
 

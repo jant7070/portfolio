@@ -1,4 +1,6 @@
 import { useScrolled } from "../hooks/useScrolled.js";
+import { LANGS, setHash } from "../lib/i18n.js";
+import { useI18n } from "./LanguageProvider.jsx";
 
 function LogoMark() {
   return (
@@ -23,6 +25,7 @@ function LogoMark() {
 }
 
 function AvailablePill() {
+  const { t } = useI18n();
   return (
     <div
       className="group hidden items-center gap-2 rounded-[999px] px-3 py-2 transition-all md:flex"
@@ -37,7 +40,7 @@ function AvailablePill() {
         aria-hidden="true"
       />
       <span className="text-[14px]" style={{ color: "var(--textDim)" }}>
-        Available
+        {t("nav.available")}
       </span>
 
       <style>{`
@@ -48,8 +51,36 @@ function AvailablePill() {
   );
 }
 
+function LanguageToggle() {
+  const { lang, setLang, t } = useI18n();
+  const next = lang === LANGS.en ? LANGS.es : LANGS.en;
+
+  return (
+    <button
+      type="button"
+      className="group inline-flex items-center gap-2 rounded-[999px] px-3 py-2 transition-all focus-visible:ring-2 focus-visible:ring-[#3B82F6]/50"
+      style={{ border: "1px solid var(--borderHi)", background: "var(--panel)" }}
+      onClick={() => setLang(next)}
+      aria-label={next === LANGS.es ? t("nav.langToggleToEs") : t("nav.langToggleToEn")}
+    >
+      <span className="font-mono text-[12.5px] uppercase tracking-[0.14em]" style={{ color: "var(--textDim)" }}>
+        {lang === LANGS.en ? "EN" : "ES"}
+      </span>
+      <style>{`
+        .group:hover { border-color: var(--accentHi); background: var(--panelHi); }
+        .group:hover span { color: var(--text); }
+      `}</style>
+    </button>
+  );
+}
+
 export function Nav() {
   const scrolled = useScrolled(16);
+  const { lang, t } = useI18n();
+
+  const handleNav = (sectionId) => {
+    setHash(lang, sectionId);
+  };
 
   return (
     <header
@@ -68,25 +99,29 @@ export function Nav() {
 
         <nav className="hidden items-center gap-8 md:flex">
           {[
-            ["About", "#about"],
-            ["Skills", "#skills"],
-            ["Work", "#projects"],
-            ["Contact", "#contact"],
-          ].map(([label, href]) => (
-            <a
-              key={href}
-              href={href}
+            [t("nav.about"), "about"],
+            [t("nav.skills"), "skills"],
+            [t("nav.work"), "projects"],
+            [t("nav.contact"), "contact"],
+          ].map(([label, id]) => (
+            <button
+              key={id}
+              type="button"
               className="text-[14px] transition-colors"
               style={{ color: "var(--textDim)" }}
               onMouseEnter={(e) => (e.currentTarget.style.color = "var(--text)")}
               onMouseLeave={(e) => (e.currentTarget.style.color = "var(--textDim)")}
+              onClick={() => handleNav(id)}
             >
               {label}
-            </a>
+            </button>
           ))}
         </nav>
 
-        <AvailablePill />
+        <div className="flex items-center gap-3">
+          <LanguageToggle />
+          <AvailablePill />
+        </div>
       </div>
     </header>
   );

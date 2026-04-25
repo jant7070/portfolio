@@ -1,4 +1,7 @@
+import { useI18n } from "./LanguageProvider.jsx";
+
 function Badge({ variant }) {
+  const { t } = useI18n();
   const isLive = variant === "live";
   return (
     <span
@@ -9,7 +12,7 @@ function Badge({ variant }) {
         background: isLive ? "rgba(34,197,94,0.06)" : "transparent",
       }}
     >
-      {isLive ? "Live" : "Private — Production"}
+      {isLive ? t("projects.badgeLive") : t("projects.badgePrivate")}
     </span>
   );
 }
@@ -38,6 +41,7 @@ function StackPill({ children }) {
 }
 
 export function ProjectCard({ project }) {
+  const { t } = useI18n();
   const { id, icon, title, description, stack, badge, href, accent, visitLabel } = project;
 
   const Base = href ? "a" : "button";

@@ -1,6 +1,7 @@
 import { useTypewriter } from "../hooks/useTypewriter.js";
 import { Reveal } from "./Reveal.jsx";
 import { DotGrid } from "./DotGrid.jsx";
+import { useI18n } from "./LanguageProvider.jsx";
 
 function HeroGlows() {
   return (
@@ -28,12 +29,8 @@ function HeroGlows() {
 }
 
 function MetricStrip() {
-  const items = [
-    ["500+", "Loan applications processed"],
-    ["15+", "Internal staff served"],
-    ["6", "Production systems shipped"],
-    ["24h", "Response time"],
-  ];
+  const { t } = useI18n();
+  const items = t("hero.metrics");
 
   return (
     <div
@@ -41,16 +38,16 @@ function MetricStrip() {
       style={{ border: "1px solid var(--border)", background: "var(--border)" }}
     >
       <div className="grid grid-cols-2 gap-px md:grid-cols-4">
-        {items.map(([num, label]) => (
-          <div key={label} className="px-[22px] py-[20px]" style={{ background: "var(--bgAlt)" }}>
+        {items.map((it) => (
+          <div key={it.label} className="px-[22px] py-[20px]" style={{ background: "var(--bgAlt)" }}>
             <div className="text-[26px] font-semibold tracking-[-0.02em]" style={{ color: "var(--text)" }}>
-              {num}
+              {it.value}
             </div>
             <div
               className="mt-1 font-mono text-[11px] uppercase tracking-[0.04em]"
               style={{ color: "var(--textFaint)" }}
             >
-              {label}
+              {it.label}
             </div>
           </div>
         ))}
@@ -60,8 +57,9 @@ function MetricStrip() {
 }
 
 export function Hero() {
+  const { t } = useI18n();
   const typed = useTypewriter(
-    ["Full-Stack Developer", "AI Automation Engineer", "Fintech Systems Builder"],
+    t("hero.roleWords"),
     { typeMs: 65, holdMs: 1500, eraseMs: 30, holdAfterEraseMs: 1500 }
   );
 
@@ -87,7 +85,7 @@ export function Hero() {
               style={{ background: "var(--accent)", boxShadow: "0 0 12px rgba(26,86,219,0.55)" }}
             />
             <div className="font-mono text-[11px] uppercase tracking-[0.14em]" style={{ color: "var(--textFaint)" }}>
-              Caracas, Venezuela · Remote, Globally
+              {t("hero.meta")}
             </div>
           </div>
         </Reveal>
@@ -110,7 +108,7 @@ export function Hero() {
         <Reveal delay={160}>
           <div className="mt-6 flex min-h-[38px] items-center gap-3">
             <div className="font-mono text-[13px]" style={{ color: "var(--textFaint)" }}>
-              role <span style={{ color: "var(--textFaint)" }}>::</span>
+              {t("hero.roleLabel")} <span style={{ color: "var(--textFaint)" }}>::</span>
             </div>
             <div className="flex items-center gap-2 font-mono text-[16px] md:text-[18px] lg:text-[22px]" style={{ color: "var(--text)" }}>
               <span>{typed}</span>
@@ -129,7 +127,7 @@ export function Hero() {
 
         <Reveal delay={240}>
           <p className="mt-7 max-w-[640px] text-[17px] leading-[1.7]" style={{ color: "var(--textDim)" }}>
-            I design and ship full-stack systems that automate complex business processes — with a focus on AI integration and fintech.
+            {t("hero.bio")}
           </p>
         </Reveal>
 
@@ -154,7 +152,7 @@ export function Hero() {
                 e.currentTarget.style.transform = "translateY(0)";
               }}
             >
-              <span className="text-[14px] font-medium">View My Work</span>
+              <span className="text-[14px] font-medium">{t("hero.ctaWork")}</span>
               <span aria-hidden="true">↓</span>
             </a>
 
@@ -176,7 +174,7 @@ export function Hero() {
                 e.currentTarget.style.background = "transparent";
               }}
             >
-              <span className="text-[14px] font-medium">Get In Touch</span>
+              <span className="text-[14px] font-medium">{t("hero.ctaTouch")}</span>
               <span aria-hidden="true" style={{ color: "var(--textFaint)" }}>
                 ↗
               </span>

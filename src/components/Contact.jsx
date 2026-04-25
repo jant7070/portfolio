@@ -1,5 +1,6 @@
 import { Reveal } from "./Reveal.jsx";
 import { ContactCard } from "./ContactCard.jsx";
+import { useI18n } from "./LanguageProvider.jsx";
 
 function EmailIcon() {
   return (
@@ -35,6 +36,7 @@ function GitHubIcon() {
 }
 
 export function Contact() {
+  const { t } = useI18n();
   return (
     <section id="contact" style={{ background: "var(--bgAlt)" }} className="py-28 md:py-36">
       <div
@@ -53,7 +55,7 @@ export function Contact() {
                 aria-hidden="true"
               />
               <div className="font-mono text-[11px] uppercase tracking-[0.14em]" style={{ color: "var(--accentHi)" }}>
-                04 / Contact
+                {t("contact.kicker")}
               </div>
             </div>
 
@@ -61,11 +63,11 @@ export function Contact() {
               className="mt-4 font-semibold tracking-[-0.025em]"
               style={{ fontSize: "clamp(36px, 6vw, 64px)", color: "var(--text)" }}
             >
-              Let's build something.
+              {t("contact.title")}
             </h2>
 
             <p className="mt-4 max-w-[640px] text-[16px] leading-[1.7] md:text-[18px]" style={{ color: "var(--textDim)" }}>
-              Available for remote work globally. I respond within 24 hours.
+              {t("contact.subtitle")}
             </p>
           </div>
         </Reveal>
@@ -73,21 +75,21 @@ export function Contact() {
         <Reveal delay={120}>
           <div className="grid gap-4 md:grid-cols-3">
             <ContactCard
-              label="Email"
+              label={t("contact.email")}
               handle="josemorillo702@gmail.com"
               href="mailto:josemorillo702@gmail.com"
               icon={<EmailIcon />}
               external={false}
             />
             <ContactCard
-              label="LinkedIn"
+              label={t("contact.linkedin")}
               handle="linkedin.com/in/jose-a-morillo"
               href="https://linkedin.com/in/jose-a-morillo"
               icon={<LinkedInIcon />}
               external
             />
             <ContactCard
-              label="GitHub"
+              label={t("contact.github")}
               handle="github.com/jant7070"
               href="https://github.com/jant7070"
               icon={<GitHubIcon />}
