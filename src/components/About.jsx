@@ -88,21 +88,27 @@ export function About() {
           <div className="md:col-span-7">
             <Reveal delay={80}>
               <p className="text-[17px] leading-[1.7]" style={{ color: "var(--text)" }}>
-                {t("about.p1")}
+                {t("about.lead")}
               </p>
             </Reveal>
 
             <Reveal delay={160}>
               <p className="mt-6 text-[17px] leading-[1.7]" style={{ color: "var(--textDim)" }}>
-                {t("about.p2Prefix")}
-                <span style={{ color: "var(--text)", fontWeight: 600 }}>{t("about.p2Strong1")}</span>
-                {t("about.p2Mid")}
-                <span style={{ color: "var(--text)", fontWeight: 600 }}>{t("about.p2Strong2")}</span>
-                {t("about.p2Suffix")}
+                {t("about.workPrefix")}
+                <span style={{ color: "var(--text)", fontWeight: 600 }}>{t("about.workStrong1")}</span>
+                {t("about.workMid")}
+                <span style={{ color: "var(--text)", fontWeight: 600 }}>{t("about.workStrong2")}</span>
+                {t("about.workSuffix")}
               </p>
             </Reveal>
 
-            <Reveal delay={240}>
+            <Reveal delay={200}>
+              <p className="mt-6 text-[17px] leading-[1.7]" style={{ color: "var(--textDim)" }}>
+                {t("about.closing")}
+              </p>
+            </Reveal>
+
+            <Reveal delay={260}>
               <div className="mt-8 flex flex-wrap gap-3">
                 <LanguageBadge flag="🇻🇪" label={t("about.badges.spanish")} level={t("about.badges.native")} />
                 <LanguageBadge flag="🇺🇸" label={t("about.badges.english")} level={t("about.badges.c2")} />

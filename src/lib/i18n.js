@@ -30,17 +30,18 @@ export const copy = {
     },
     about: {
       kicker: "01 / About",
-      title: "Solo technical hire, regulated fintech.",
-      subtitle:
-        "Architected and deployed an end-to-end lending platform from scratch for a Venezuelan microfinance company — every layer, from JWT auth to bank API integration.",
-      p1:
-        "I joined a regulated Venezuelan microfinance company as the only technical hire and built an end-to-end lending platform from scratch — application intake, risk review, disbursement, repayment tracking, and the AI tooling around it.",
-      p2Prefix: "The platform processes ",
-      p2Strong1: "500+ loan applications",
-      p2Mid: " and serves ",
-      p2Strong2: "15+ internal staff",
-      p2Suffix:
-        " across multiple roles. Self-taught, 4Geeks Academy certified. I work bilingually with native Spanish and C2 English.",
+      title: "Full-stack, AI automation, production systems.",
+      subtitle: "Lending platform in production — end-to-end build, banking integrations, and AI tooling.",
+      lead:
+        "I'm a full-stack developer and AI automation engineer based in Caracas, Venezuela — available remotely.",
+      workPrefix: "My current work: I joined a regulated Venezuelan microfinance company as the only technical hire and built their entire lending platform from scratch. That means everything from JWT authentication and role-based access control to real banking API integration, AI-powered document processing, and automated delinquency monitoring. The platform has processed ",
+      workStrong1: "500+ loan applications",
+      workMid: " and is used daily by ",
+      workStrong2: "15+ internal staff",
+      workSuffix:
+        " across risk, operations, and administration.",
+      closing:
+        "I'm self-taught and 4Geeks Academy certified — which means everything I know came from building real things, not passing exams. I work bilingually in Spanish (native) and English (C2), and I'm actively looking for remote roles where I can keep building systems that actually do something.",
       badges: {
         spanish: "Spanish",
         english: "English",
@@ -61,6 +62,8 @@ export const copy = {
       kicker: "02 / Capabilities",
       title: "The full stack — from server to LLM.",
       subtitle: "Practical tools shipped to production. No theoretical lists; only what's running today.",
+      filterLabel: "Filter by project",
+      filterAll: "All",
       tool: "tool",
       tools: "tools",
       groups: [
@@ -191,17 +194,19 @@ export const copy = {
     },
     about: {
       kicker: "01 / Sobre mí",
-      title: "Único perfil técnico, fintech regulada.",
+      title: "Full-stack, automatización con IA, sistemas en producción.",
       subtitle:
-        "Diseñé y desarrollé desde cero una plataforma de créditos end-to-end para una empresa de microfinanciamientos venezolana — cada capa, desde autenticación JWT hasta integración con APIs bancarias.",
-      p1:
-        "Me uní a una empresa de microfinanciamientos venezolana regulada como único perfil técnico y construí desde cero una plataforma de financiamientos end-to-end — captación de solicitudes, evaluación de riesgo, desembolso, seguimiento de pagos y tooling de IA alrededor del sistema.",
-      p2Prefix: "La plataforma procesa ",
-      p2Strong1: "500+ solicitudes de crédito",
-      p2Mid: " y sirve a ",
-      p2Strong2: "15+ miembros del equipo interno",
-      p2Suffix:
-        " en múltiples roles. Autodidacta, certificado por 4Geeks Academy. Trabajo de forma bilingüe con español nativo e inglés C2.",
+        "Plataforma de créditos en producción — construcción end-to-end, integraciones bancarias y tooling de IA.",
+      lead:
+        "Soy desarrollador full-stack e ingeniero de automatización con IA, con base en Caracas, Venezuela — disponible de forma remota.",
+      workPrefix:
+        "Mi trabajo actual: me uní a una microfinanciera venezolana regulada como único perfil técnico y construí desde cero toda su plataforma de créditos. Eso incluye autenticación JWT y control de acceso basado en roles, integración real con APIs bancarias, procesamiento de documentos con IA y monitoreo automatizado de morosidad. La plataforma ha procesado ",
+      workStrong1: "500+ solicitudes de crédito",
+      workMid: " y la usan a diario más de ",
+      workStrong2: "15+ personas del equipo interno",
+      workSuffix: " en riesgo, operaciones y administración.",
+      closing:
+        "Soy autodidacta y estoy certificado por 4Geeks Academy — lo que significa que lo que sé lo aprendí construyendo cosas reales, no aprobando exámenes. Trabajo de forma bilingüe en español (nativo) e inglés (C2), y busco activamente roles remotos donde pueda seguir construyendo sistemas que realmente hagan algo.",
       badges: {
         spanish: "Español",
         english: "Inglés",
@@ -222,6 +227,8 @@ export const copy = {
       kicker: "02 / Capacidades",
       title: "El stack completo — del servidor al LLM.",
       subtitle: "Herramientas prácticas en producción. Sin listas teóricas; solo lo que corre hoy.",
+      filterLabel: "Filtrar por proyecto",
+      filterAll: "Todos",
       tool: "herramienta",
       tools: "herramientas",
       groups: [
