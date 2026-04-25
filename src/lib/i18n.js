@@ -83,6 +83,7 @@ export const copy = {
       title: "Systems running in production.",
       subtitle:
         "A regulated fintech, six interconnected systems, one engineer. Most are private; the public-facing site is linked.",
+      dragHint: "drag to explore",
       badgePrivate: "Private — Production",
       badgeLive: "Live",
       visit: "visit capitalinvicto.com",
@@ -248,6 +249,7 @@ export const copy = {
       title: "Sistemas corriendo en producción.",
       subtitle:
         "Una fintech regulada, seis sistemas interconectados, un ingeniero. La mayoría son privados; el sitio público está enlazado.",
+      dragHint: "arrastra para explorar",
       badgePrivate: "Privado — Producción",
       badgeLive: "En vivo",
       visit: "visitar capitalinvicto.com",
