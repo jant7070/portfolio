@@ -14,6 +14,11 @@ export const copy = {
       langToggleToEs: "Switch language to Spanish",
       langToggleToEn: "Switch language to English",
     },
+    whatsapp: {
+      tooltip: "Chat on WhatsApp",
+      ariaLabel: "Contact Jose on WhatsApp",
+      cardLabel: "WhatsApp",
+    },
     hero: {
       meta: "Caracas, Venezuela · Remote, Globally",
       roleLabel: "role",
@@ -178,6 +183,11 @@ export const copy = {
       available: "Disponible",
       langToggleToEs: "Cambiar idioma a español",
       langToggleToEn: "Cambiar idioma a inglés",
+    },
+    whatsapp: {
+      tooltip: "Escríbeme por WhatsApp",
+      ariaLabel: "Contactar a Jose por WhatsApp",
+      cardLabel: "WhatsApp",
     },
     hero: {
       meta: "Caracas, Venezuela · Remoto, Global",

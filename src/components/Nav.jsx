@@ -1,6 +1,7 @@
 import { useScrolled } from "../hooks/useScrolled.js";
 import { LANGS, setHash } from "../lib/i18n.js";
 import { useI18n } from "./LanguageProvider.jsx";
+import { WhatsAppButton } from "./WhatsAppButton.jsx";
 
 function LogoMark() {
   return (
@@ -123,6 +124,7 @@ export function Nav() {
         </nav>
 
         <div className="flex items-center gap-3">
+          <WhatsAppButton size="sm" />
           <LanguageToggle />
           <AvailablePill />
         </div>
